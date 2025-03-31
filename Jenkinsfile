@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/VikaAvd/jenkins-test-repo.git'
+                git url: 'https://github.com/VikaAvd/jenkins-test-repo.git'
             }
         }
         stage('Install Dependencies') {
@@ -19,3 +19,4 @@ pipeline {
         }
     }
 }
+

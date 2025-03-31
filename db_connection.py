@@ -1,20 +1,18 @@
-import pyodbc
+import pymssql
 
 def get_db_connection():
     """
-    Adjust for your environment with your values.
-    Connection string uses ODBC Driver 17 for SQL Server, with extra parameters for Driver 18 if needed.
+    Connect to the SQL Server database using pymssql.
+    Adjust the server, user, password, and database values to match your environment.
+    
+    Note: pymssql does not require an ODBC driver specification.
     """
-    conn_str = (
-        "DRIVER={ODBC Driver 17 for SQL Server};"
-        "SERVER=EPUALVIW059D\\SQLEXPRESS01;"
-        "DATABASE=TRN;"
-        "UID=robot;"
-        "PWD=Vika_password123;"
-        "Encrypt=no;"
-        "TrustServerCertificate=yes;"
+    conn = pymssql.connect(
+        server='EPUALVIW059D\\SQLEXPRESS01',
+        user='robot',
+        password='Vika_password123',
+        database='TRN'
     )
-    return pyodbc.connect(conn_str)
+    return conn
 
-import pyodbc
 
