@@ -8,7 +8,8 @@ def get_db_connection():
     Note: pymssql does not require an ODBC driver specification.
     """
     conn = pymssql.connect(
-        server='EPUALVIW059D\\SQLEXPRESS01',
+        # server='EPUALVIW059D\\SQLEXPRESS01',
+        server='host.docker.internal\\SQLEXPRESS01',
         user='robot',
         password='Vika_password123',
         database='TRN'
