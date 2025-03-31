@@ -54,6 +54,7 @@ pytest_db_tests/
 ├── db_connection.py         # Contains the database connection helper function
 ├── requirements.txt         # List of required Python packages
 ├── README.md                # Project instructions
+├── Jenkinsfile              # Jenkins file
 └── output/                  # Folder where test reports (e.g., HTML) are generated
 ```
 
