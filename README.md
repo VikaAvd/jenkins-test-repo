@@ -122,6 +122,7 @@ After running the tests, the following will be generated:
 - Other formats: PyTest can generate additional report types if configured.
 
 ## Troubleshooting
+
 Connection Issues:
 If you receive errors verify that:
 - ODBC Driver: The correct ODBC driver is installed and visible to Python.
