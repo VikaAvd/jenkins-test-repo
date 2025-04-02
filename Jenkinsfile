@@ -5,10 +5,10 @@ pipeline {
         stage('Checkout') {
             steps {
                 checkout scmGit(
-                    branches: [[name: '*/feature-branch']],
+                    branches: [[name: '*/develop']],
                     extensions: [],
                     userRemoteConfigs: [[credentialsId: 'github_token', url: 'https://github.com/VikaAvd/jenkins-test-repo']]
-                )
+                ) 
             }
         }
         stage('Install Dependencies') {
