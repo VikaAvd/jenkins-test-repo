@@ -28,10 +28,11 @@ pipeline {
                     echo "Configuring Git for deployment..."
                     git config --global user.email "jenkins@example.com"
                     git config --global user.name "Jenkins"
-                    echo "Checking out main branch..."
+                    echo "Fetching and checking out develop branch..."
+                    git fetch origin develop
+                    git checkout develop
+                    echo "Creating/updating main branch from develop..."
                     git checkout -B main
-                    echo "Merging develop into main..."
-                    git merge origin/develop --no-ff -m "Merging develop into main for deployment"
                     echo "Pushing main branch..."
                     git push https://${GITHUB_TOKEN}@github.com/VikaAvd/jenkins-test-repo.git main --force
                     echo "Deployment complete."
