@@ -42,7 +42,7 @@ The project implements six test cases (two per table):
 
 ## Project Structure
 ```bash 
-pytest_db_tests/
+pytest_db_tests/ 
 ├── tests/
 │   ├── conftest.py          # PyTest fixture for DB connection
 │   ├── test_employees.py    # Tests for the employees table
