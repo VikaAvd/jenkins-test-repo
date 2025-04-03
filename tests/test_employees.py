@@ -22,6 +22,6 @@ def test_employee_avg_salary(db_conn):
     cursor.close()
 
     avg_salary = row[0]
-    # assert 1000 <= avg_salary <= 20000, f"Average salary out of range: {avg_salary}"
-    assert 1 <= avg_salary <= 2, f"Average salary out of range: {avg_salary}"
+    assert 1000 <= avg_salary <= 20000, f"Average salary out of range: {avg_salary}"
+    
 
