@@ -41,8 +41,8 @@ The project implements six test cases (two per table):
 - Docker installed on your system for running Jenkins.
 
 ## Project Structure
-```bash 
-pytest_db_tests/ 
+```bash
+pytest_db_tests/
 ├── tests/
 │   ├── conftest.py          # PyTest fixture for DB connection
 │   ├── test_employees.py    # Tests for the employees table
