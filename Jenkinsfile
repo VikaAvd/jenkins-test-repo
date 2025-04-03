@@ -11,7 +11,7 @@ pipeline {
                     branches: [[name: '*/develop']],
                     extensions: [],
                     userRemoteConfigs: [[credentialsId: 'github_token', url: 'https://github.com/VikaAvd/jenkins-test-repo']]
-                ) 
+                )
             }
         }
         stage('Fetch Remote Main') {
@@ -50,12 +50,20 @@ pipeline {
                     echo "Configuring Git..."
                     git config --global user.email "jenkins@example.com"
                     git config --global user.name "Jenkins"
-                    echo "Checking out main branch..."
-                    git checkout -B main
+        
+                    echo "Fetching latest main..."
+                    git fetch origin main
+        
+                    echo "Checking out main branch locally..."
+                    git checkout main
+                    git pull origin main
+        
                     echo "Merging develop into main..."
-                    git merge origin/develop --no-ff -m "Merging develop into main for deployment"
-                    echo "Pushing main branch..."
-                    git push https://${GITHUB_TOKEN}@github.com/VikaAvd/jenkins-test-repo.git main --force
+                    git merge origin/develop
+        
+                    echo "Pushing updated main to remote..."
+                    # Notice no --force
+                    git push https://${GITHUB_TOKEN}@github.com/VikaAvd/jenkins-test-repo.git main
                     echo "Deployment complete."
                     '''
                 }
