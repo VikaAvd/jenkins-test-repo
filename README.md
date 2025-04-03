@@ -41,7 +41,7 @@ The project implements six test cases (two per table):
 - Docker installed on your system for running Jenkins.
 
 ## Project Structure
-```bash
+```bash 
 pytest_db_tests/
 ├── tests/
 │   ├── conftest.py          # PyTest fixture for DB connection
@@ -52,7 +52,7 @@ pytest_db_tests/
 ├── requirements.txt         # List of required Python packages
 ├── README.md                # Project documentation (this file)
 ├── Jenkinsfile              # Jenkins pipeline script for CI/CD
-└── output/                  # Folder where test reports (e.g., HTML) are generated
+└── output/                  # Folder where test reports are generated
 ```
 
 ## Installation
@@ -69,8 +69,8 @@ Ensure you have Python installed, then run:
 Open db_connection.py and update the connection string with your SQL Server settings. For example:
 - SERVER: If running locally from a Docker container, use host.docker.internal\\SQLEXPRESS01
 - DATABASE: TRN
-- UID: (e.g., robot)
-- PWD: your password (e.g. Vika_password123)
+- UID: {your login} (e.g., robot)
+- PWD: {your password} (e.g. Vika_password123)
 
 2. **Git Repository Branch Structure:**  
 The repository follows a Git Flow approach with three main branches:
