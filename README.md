@@ -52,7 +52,7 @@ pytest_db_tests/
 ├── requirements.txt         # List of required Python packages
 ├── README.md                # Project documentation (this file)
 ├── Jenkinsfile              # Jenkins pipeline script for CI/CD
-└── output/                  # Folder where test reports (e.g., HTML) are generated
+└── output/                  # Folder where test reports are generated
 ```
 
 ## Installation
